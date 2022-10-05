@@ -7,6 +7,7 @@ app = Flask(__name__)
 stage = os.environ["stage"]
 name = os.environ["name"]
 # print(name)
+
 @app.route("/")
 def main():
     return render_template("main.html", name=name, stage=stage)
